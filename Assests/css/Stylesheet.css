@@ -1,0 +1,446 @@
+/* General Styling */
+
+/* Body and Font Settings */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #444;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto 0;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+/* Top Bar */
+.Top-bar {
+  display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Distribute items evenly with space between */
+    align-items: center; /* Vertically align items */
+    padding: 10px 0; /* Add vertical padding */
+}
+.table {
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+  .Top-bar .logo img {
+    max-height: 60px; /* Optional: Limit logo height for consistent appearance */
+  }
+
+.Top-bar .logo { flex: 1; text-align: left; }
+.Top-bar .search-bar {
+  width: 100%;    flex: 2; /* Allow the search bar to take up 2 units of space */
+    text-align: center; /* Center-align the search bar */
+  
+}
+
+.Top-bar .search-bar input[type="search"] {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Top-bar .search-bar button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+
+/* Account and Cart Icons (Hidden on Small Screens) */
+.Top-bar .account-cart {
+ flex: 1; /* Allow account/cart section to take up 1 unit of space */
+    text-align: right; /* Align icons to the right */
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: flex-end; /* Push items to the right */
+    gap: 15px; /* Add spacing between icons */
+}
+Top-bar .account-cart a {
+    color: #333; /* Default text color for links */
+    text-decoration: none;
+    font-weight: bold; /* Optional: Bold text */
+  }
+ .Top-bar .account-cart i {
+    margin-right: 5px; /* Add space between icons and text */
+  }
+
+/* Small Screen Dropdown Styling */
+.navbar-icons .dropdown {
+  position: relative;
+}
+
+.navbar-icons .dropdown-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-icons .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the dropdown button */
+  left: 0;
+  background-color: #FF7F00; /* Orange background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.navbar-icons .dropdown-menu .dropdown-item {
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.navbar-icons .dropdown-menu .dropdown-item:hover {
+  background-color: #e65c00; /* Slightly darker orange on hover */
+}
+
+.navbar-icons .dropdown:hover .dropdown-menu,
+.navbar-icons .dropdown:focus .dropdown-menu {
+  display: block;
+}
+
+
+
+.search-bar input[type="search"] {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Navbar */
+.navbarline {
+  background-color: #2897FF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* Navbar Icons for Small Screens */
+.navbar-icons {
+  display: none;
+  justify-content: space-evenly;
+  background-color: #ff7f00;
+  padding: 10px 0;
+}
+
+.navbar-icons .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white ;
+  text-decoration: none;
+}
+
+/* Information Section */
+.information-section {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 30px 0; /* Add spacing around the section */
+  border-top: 1px solid #ddd; /* Optional: Top border for separation */
+}
+
+.information-section h5 {
+  color: #444; /* Darker text color for headings */
+  font-size: 16px;
+  font-weight: bold; /* Make headings bold */
+  margin-bottom: 15px; /* Add space below headings */
+}
+
+.information-section ul {
+  list-style: none; /* Remove list styling */
+  padding: 0;
+}
+
+.information-section ul li {
+  margin-bottom: 10px; /* Add space between items */
+  color: #666; /* Light grey text */
+}
+
+.information-section ul li a {
+  text-decoration: none; /* Remove link underline */
+  color: #007bff; /* Link color */
+}
+
+.information-section ul li a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.information-section .social-icons a {
+  margin-right: 10px; /* Add spacing between icons */
+  font-size: 18px; /* Icon size */
+  color: #007bff; /* Icon color */
+}
+
+.information-section .social-icons a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.subscribe-form input[type="email"] {
+  padding: 8px;
+  width: 70%; /* Adjust input width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.subscribe-form button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #e65c00;
+}
+
+/* Footer */
+.footer {
+  background-color: #000; /* Black background */
+  color: white; /* White text color */
+  padding: 10px 0; /* Add spacing */
+  text-align: center; /* Center-align text */
+  font-size: 14px; /* Smaller text size */
+  margin-top: 30px; /* Space above footer */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 14px;
+}
+
+
+
+.navbar-icons .nav-link i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Dropdown Styling */
+.navbarline .dropdown-menu {
+  background-color: #2897FF;
+  border: none;
+  text-align: center;
+}
+
+/* Cart Page Styling */
+.cart-container {
+  margin-top: 50px;
+}
+
+
+
+.cart-container h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #ff6600;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e65c00;
+}
+
+/* Navbar for Large Screens (Center items, white text) */
+@media (min-width: 768px) {
+  .navbarline {
+    display: flex;
+    justify-content: center;
+    background-color: #2897FF;
+    padding: 10px 0;
+  }
+
+  .navbarline .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between items */
+    list-style: none;
+    padding: 0 15px;
+    margin:  0 auto;
+	  width: 100%
+  }
+
+  .navbarline .nav-item .nav-link {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .navbarline .nav-item .nav-link:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Navbar for Small Screens (Icons + Text) */
+@media (max-width: 767px) {
+  .navbarline {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FF7F00; /* Orange background */
+    padding: 10px 0;
+  }
+	/* Search Bar Styling */
+.Top-bar .search-bar {
+  width: 100%;
+  text-align: center;
+}
+
+.Top-bar .search-bar input[type="search"] {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Top-bar .search-bar button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+	
+	.Top-bar {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  padding: 10px;
+  gap: 15px; /* Space between logo, search bar, and account-cart */
+}
+	
+	
+
+  .navbar-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navbar-icons .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .navbar-icons .nav-link i {
+    font-size: 24px; /* Icon size */
+    margin-bottom: 5px;
+  }
+
+  .navbar-icons .nav-link span {
+    font-size: 12px; /* Text below icons */
+  }
+
+  .navbar-toggler {
+    display: block;
+    color: white;
+    border: none;
+    font-size: 20px;
+    background: none;
+  }
+
+  .navbarline .navbar-nav {
+    display: none; /* Hide large screen links */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .Top-bar .account-cart {
+    display: none; /* Hide on small screens */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .information-section .row > div {
+    margin-bottom: 20px; /* Add spacing between sections */
+    text-align: center; /* Center-align content on small screens */
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 100%; /* Full-width input on small screens */
+    margin-bottom: 10px; /* Add spacing below input */
+  }
+
+  .subscribe-form button {
+    width: 100%; /* Full-width button on small screens */
+  }
+}
